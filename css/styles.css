@@ -1,0 +1,235 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #111;
+    color: #fff;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 4%;
+}
+
+.navbar-brand > h1 {
+    font-size: 1.8rem;
+    font-weight: 600;
+}
+
+.navbar-menu > i {
+    font-size: 1.75rem;
+    position: relative;
+    transition: transform 500ms ease-in-out;
+    cursor: pointer;
+}
+
+.menu-items {
+    position: absolute;
+    list-style: none;
+    width: 100vw;
+    left: 0px;
+    top: 74px;
+    padding: 0 4% 24px;;
+    font-size: 1.1rem;
+    z-index: 1;
+    background-color: #111;
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0s, opacity 500ms linear;
+}
+
+.menu-items .item {
+    margin: 24px 0;
+}
+
+.menu-items .item a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.navbar-menu.active .menu-items {
+    visibility: visible;
+    opacity: 1;
+}
+
+.navbar-menu.active > i {
+    transform: rotate(180deg);
+    font-size: 2rem;
+}
+
+.login {
+    display: flex;
+    justify-content: center;
+    background-color: #024866;
+    padding: 60px 10px;
+    transition: padding-top 200ms ease-in-out;
+}
+
+.expand {
+    padding-top: 243px;
+}
+
+.form-control {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: clamp(300px, 90vw, 425px);
+    background-color: #111;
+    padding: 20px 10px 25px;
+    border-radius: 12px;
+    box-shadow: 0 0 8px #000000;
+}
+
+.form-control > i {
+    font-size: 2.5rem;
+    color: #00acee;
+}
+
+.form-control > h2 {
+    margin: 14px;
+    font-weight: 600;
+    font-size: 2rem;
+}
+
+.fBtn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    margin: 8px 0;
+    padding: 8px 0;
+    width: 280px;
+    background-color: #fff;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 500;
+    color: #111;
+}
+
+.fBtn i {
+    font-size: 1.3rem;
+    margin-right: 5px;
+}
+
+.form-hr {
+    display: flex;
+    align-items: center;
+    margin: 10px;
+}
+
+.form-hr hr {
+    border: 0;
+    border-top: 1px;
+    width: 120px;
+    border-style: solid;
+    color: #333333;
+}
+
+.form-hr p {
+    margin: 0 8px;
+}
+
+.form-control form {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    padding: 8px 0 32px;
+}
+
+.form-input {
+    width: 280px;
+    height: 60px;
+    border-radius: 6px;
+    outline: none;
+    background-color: #111;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #333333;
+    margin-bottom: 16px;
+    color: #fff;
+    font-family: inherit;
+    font-size: 1rem;
+    font-weight: 300;
+    padding: 20px 10px 4px;
+}
+
+.form-input:focus {
+    border-color: #00acee;
+    border-width: 2px;
+}
+
+.form-control form label {
+    position: absolute;
+    color: #777;
+    font-weight: 300;
+    cursor: text;
+    transition: top 200ms ease-in, 
+        left 200ms ease-in,
+        font-size 200ms ease-in;
+}
+
+.label-email {
+    left: 15px;
+    top: 27px;
+}
+
+.label-password {
+    left: 15px;
+    top: 103px;
+}
+
+#email:focus ~ .label-email {
+    color:#00acee;
+}
+
+#email:focus ~ .label-email,
+#email:not(:placeholder-shown)#email:not(:focus) ~ .label-email {
+    left: 10px;
+    top: 17px;
+    font-size: 0.8rem;
+}
+
+#password:focus ~.label-password {
+    color: #00acee;
+}
+
+#password:focus ~ .label-password,
+#password:not(:placeholder-shown)#password:not(:focus) ~ .label-password {
+    left: 10px;
+    top: 93px;
+    font-size: 0.8rem;
+}
+
+.btn1 {
+    font-family: inherit;
+    border: none;
+    font-size: 0.9rem;
+    font-weight: 600;
+    padding: 11px 0;
+    cursor: pointer;
+}
+
+.btn2 {
+    background-color: #111;
+    color: #fff;
+    border: 1px solid #444;
+    padding: 10px 0;
+}
+
+.form-control-bottom-text {
+    font-size: 0.85rem;
+}
+
+.form-control-bottom-text a {
+    text-decoration: none;
+    color: #00acee
+}
